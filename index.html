@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css\estilos.css">
+    <style>
+        .hero {
+            background: url("img/baner.png") no-repeat center center;
+            background-size: contain;
+            height: 400px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            color: rgb(255, 0, 0) !important;
+            font-family: "Silkscreen", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            color: rgb(255, 0, 0) !important;
+            font-family: "Silkscreen", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: rgb(0, 0, 0) !important;
+            font-family: "Silkscreen", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <img src="img\mariologo.jpg" alt="">MARIO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#caracteristicas">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comprar">Compralo ahora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactos">Comtactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>¡Descubre la Magia de Mario!</h1>
+        <h2>Un Clásico que Nunca Pasa de Moda</h2>
+        <p>Mario, el icónico fontanero de Nintendo, ha capturado los corazones de jugadores de todas las edades desde su
+            primera aparición. Ahora, te invitamos a sumergirte en su mundo lleno de aventuras, desafíos y diversión
+            interminable.</p>
+        <h2>¿Por Qué Elegir Mario?</h2>
+        <p>Aventuras Épicas: Acompaña a Mario en su misión para rescatar a la princesa Peach y enfrenta a Bowser en
+            emocionantes mundos llenos de obstáculos y enemigos únicos.</p>
+        <a href="#comprar" class="btn btn-danger btn-lg">¡Compra Ahora!</a>
+    </header>
+
+    <div class="container my-5" id="caracteristicas">
+        <h2>Características del Juego</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="feature-icon">🌍</div>
+                <h3>8 mundos Increíbles</h3>
+                <p>Explora mundos clasicos vibrantes llenos de aventuras y sorpresas.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="feature-icon">👾</div>
+                <h3>Aventuras Épicas</h3>
+                <p>Acompaña a Mario en su misión para rescatar a la princesa Peach y enfrenta a Bowser en emocionantes
+                    mundos llenos de obstáculos y enemigos únicos.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="feature-icon">🎮</div>
+                <h3>Recuerdos Memorables</h3>
+                <p>Ven y recuerda el primer juego que cambio la industria de los videojuegos para siempre.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5" id="galeria">
+        <h2>Galería</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="img\imagen.jpg" alt="Mario en acción" class="img-fluid gallery-img">
+            </div>
+            <div class="col-md-4">
+                <img src="img\imagen2.jpg" alt="Mundos de Mario" class="img-fluid gallery-img">
+            </div>
+            <div class="col-md-4">
+                <img src="img\imagen3.png" alt="Desafíos épicos" class="img-fluid gallery-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5" id="comprar">
+        <h2>Convencido ¿SI? ¡Consíguelo Ahora!</h2>
+        <form id="compraForm" onsubmit="return handleSubmit(event);">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" placeholder="Ej: Juan Aliaga" class="form-control" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" placeholder="Ej: micorreo@gmail.com" class="form-control" id="email" required>
+            </div>
+            <button type="submit" class="btn btn-success">Comprar</button>
+        </form>
+    </div>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            window.open("https://fonts.google.com/selection/embed", "_blank");
+        }
+    </script>
+    <a id="contactos"></a>
+        <section>
+            <h2>Contactos</h2>
+            <div class="contactos-container">
+                <div class="contacto-item">
+                    <h3>Email</h3>
+                    <p>contacto@nostalgia.com</p>
+                </div>
+                <div class="contacto-item">
+                    <h3>Teléfono</h3>
+                    <p>+591 77755533</p>
+                </div>
+                <div class="contacto-item">
+                    <h3>Dirección</h3>
+                    <p>Av. Arce Edificio Mario piso 2</p>
+                </div>
+            </div>
+        </section>
+    <footer class="footer">
+        <p>DERECHOS RESERVADOS</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="icons\facebook-icon.png" alt="Facebook" /></a>
+            <a href="https://instagram.com" target="_blank"><img src="icons\instagram-icon.png" alt="Instagram" /></a>
+            <a href="https://x.com" target="_blank"><img src="icons\x-icon.png" alt="X" /></a>
+            <a href="https://tiktok.com" target="_blank"><img src="icons\tiktok.png" alt="Tiktok" /></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
